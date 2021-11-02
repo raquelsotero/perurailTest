@@ -25,14 +25,14 @@ public class HomePage extends  BasePage {
     private By pasajeros = By.id("countParentsChildren");
     private By agregaAdulto= By.id("adultsAume");
     private By agregarChild= By.id("childrenAume");
-    private By quitarAdulto= By.id("id=\"adultsDism\"");
+    private By quitarAdulto= By.id("adultsDism");
     private By cantidadAdultoSeleccionado = By.name("adultsSelect");
     private By cerrarPasajero= By.xpath("//a[@class=\"cerrar-passanger\"]");
     private By btnBuscarTren = By.id("btn_search");
     private By mensajeError = By.id("error-pasajeros");
     private By listaDias = By.xpath("//a[@class='ui-state-default']");
     private By mesMostrado = By.cssSelector("#ui-datepicker-div > div > div > span.ui-datepicker-month");
-    private By fechaActual = By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[1]/td[2]/a");
+    private By fechaActual = By.className("ui-state-default ui-state-highlight ui-state-active");
     private By tren = By.id("cbTrenSelect");
 
    // constructor que llama al instructor de la clase padre
@@ -75,7 +75,7 @@ public class HomePage extends  BasePage {
     }
 
     public void indicarPasajerosAdulto(int adulto) {
-        int i = 0;
+        int i = 1;
         while (i <= adulto) {
             driver.findElement(agregaAdulto).click();
 
@@ -84,7 +84,7 @@ public class HomePage extends  BasePage {
     }
 
     public void indicarPasajerosChild(int child) {
-        int i = 0;
+        int i = 1;
         while (i <= child) {
             driver.findElement(agregarChild).click();
 
@@ -96,14 +96,13 @@ public class HomePage extends  BasePage {
 
          String sinAdulto = driver.findElement(cantidadAdultoSeleccionado).getAttribute("value");
          System.out.println(sinAdulto);
+         int i=0;
 
-         for (int i=0; i=2;i++){
-            if (sinAdulto=="0"){
-                break;
-            }else {
-                driver.findElement(quitarAdulto).click();
+         while (i<=2){
+             driver.findElement(quitarAdulto).click();
+             i++;
 
-            }
+
         }
 
 

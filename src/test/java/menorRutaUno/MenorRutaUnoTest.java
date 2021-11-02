@@ -23,6 +23,9 @@ public class MenorRutaUnoTest extends BaseTest {
         homePage.indicarPasajeros();
         homePage.indicarPasajerosChild(1);
         homePage.disminuirPasajeroAdulto();
+        homePage.cerrarSeleccionPasajero();
+
+        Assert.assertEquals(homePage.mostrarMensajeError(),"MINIMO 1 ADULTO");
 
 
 

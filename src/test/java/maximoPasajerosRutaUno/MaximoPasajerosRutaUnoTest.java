@@ -24,7 +24,7 @@ public class MaximoPasajerosRutaUnoTest extends BaseTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
         homePage.indicarPasajeros();
         homePage.indicarPasajerosAdulto(9);
-        homePage.indicarPasajerosChild(1);
+        homePage.indicarPasajerosChild(2);
 
 
 

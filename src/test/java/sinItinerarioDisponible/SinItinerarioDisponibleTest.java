@@ -22,7 +22,7 @@ public class SinItinerarioDisponibleTest extends BaseTest {
         homePage.seleccionarDestino("Machu Picchu");
         homePage.seleccionarRuta("Cusco > Machu Picchu");
         homePage.indicarSalida();
-        homePage.elegirFechaActual();
+        homePage.elegirDia("2");
         homePage.indicarPasajeros();
         homePage.indicarPasajerosAdulto(1);
         homePage.indicarPasajerosChild(1);
