@@ -19,7 +19,6 @@ public class MaximoPasajerosRutaUnoTest extends BaseTest {
 
         homePage.seleccionarDestino("Machu Picchu");
         homePage.seleccionarRuta("Cusco > Machu Picchu");
-        //homePage.indicarDiaSalida();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
         homePage.indicarPasajeros();

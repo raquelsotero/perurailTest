@@ -119,7 +119,6 @@ public class HomePage extends  BasePage {
 
         String mesActual = driver.findElement((mesMostrado)).getText();
 
-        System.out.println(mesActual);
 
         if (mes== mesActual) {
             driver.findElement(siguienteMes).click();
